@@ -10,11 +10,11 @@ void setup() {
     size(600, 600);  // Set window size
     noLoop();        // Ensures draw() only runs once
 
-    f1 = loadImage("assets/1.png");
-    f2 = loadImage("assets/2.png");
-    f3 = loadImage("assets/3.png");
-    f4 = loadImage("assets/4.png");
-    f5 = loadImage("assets/5.png");
+    f1 = loadImage("1.png");
+    f2 = loadImage("2.png");
+    f3 = loadImage("3.png");
+    f4 = loadImage("4.png");
+    f5 = loadImage("5.png");
 
     // Debugging: Check if images loaded
     if (f1 == null) println("Error loading 1.png");
