@@ -5,6 +5,10 @@ body {
     font-family: "Gill Sans", sans-serif;
     text-align: center;
 }
+canvas {
+    display: block;
+    margin: 20px auto;
+}
 
 #content {
     display: block;
