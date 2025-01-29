@@ -1,6 +1,6 @@
 int numRows = 8;  // Number of rows of faces
 int numCols = 8;  // Number of columns of faces
-int faceSize = 50; // Size of each die
+int faceSize = 50; // Size of each face
 int total;        // Total value of all expressions
 PImage f1, f2, f3, f4, f5;
 String[] vibe = {"Excellent", "Good", "Fine", "Bit rough", "Terrible"};
