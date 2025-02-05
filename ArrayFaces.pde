@@ -113,8 +113,8 @@ void draw()
   textSize(30);
   textAlign(CENTER);
   text(outcome, 300, 100);
-  System.out.print(value);
-  System.out.println(outcome);
+  //System.out.print(value);
+  //System.out.println(outcome);
   
 }
 
