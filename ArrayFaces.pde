@@ -1,6 +1,13 @@
+/*
+Truman Evans
+2/5/2025
+Learning goal: Students will demonstrate their understanding of Object-Oriented Programming and arrays by designing a Die class,
+creating an array of Die objects to form a dynamic grid, calculating and displaying the total value of the dice,
+and customizing the presentation of their program through HTML elements.
+*/
 PImage ball, hurts, brown, barkley, mcduffie;    //initializing images
 String[] play = {"Touchdown!", "1st Down!", "Incompletion :(", "Interception! Oh no! Disaster!"};
-String outcome;
+String outcome = "";
 int value = 0;
 int x = 280; 
 int y = 550;
@@ -101,41 +108,14 @@ void draw()
   ball.resize(45,30);
   image(ball, x, y);
 
-  //System.out.print(value);
-  
-  outcome = "";
+
   fill(255);
   textSize(30);
   textAlign(CENTER);
-  text(outcome, 300, 150);
+  text(outcome, 300, 100);
+  System.out.print(value);
   System.out.println(outcome);
   
-  if(value == 1){
-  x = 530;
-  y = 320;
-  
-  outcome = play[1];
-}
-else if(value == 2){
-  x = 200;
-  y = 180;
-  
-  outcome = play[0];
-  
-}
-else if(value == 3){
-  x = 300;
-  y = 280;
-  
-  outcome = play[2];
-}
-else if(value == 4){
-  x = 100;
-  y = 400;
-  
-  outcome = play[3];
-}
- 
 }
 
 void mousePressed()
@@ -146,39 +126,50 @@ void mousePressed()
 
 void roll()
 {
+  
+    //outcome = "";
   value = (int) (Math.random()*4)+1;
   
-//if(value == 1){
-//  x = 530;
-//  y = 320;
+    if(value == 1){
+  x = 530;                     //brown, 1st down
+  y = 320;
   
-//  outcome = play[1];
-//}
-//else if(value == 2){
-//  x = 200;
-//  y = 180;
+  outcome = play[1];          //1st down
+}
+else if(value == 2){
+  x = 200;                    //barkley, touchdown
+  y = 180;
   
-//  outcome = play[0];
+  outcome = play[0];          //touchdown
   
-//}
-//else if(value == 3){
-//  x = 300;
-//  y = 280;
+}
+else if(value == 3){
+  x = 300;                    //nobody, incompletion
+  y = 280;
   
-//  outcome = play[2];
-//}
-//else if(value == 4){
-//  x = 100;
-//  y = 400;
+  outcome = play[2];          //incompletion
+}
+else if(value == 4){
+  x = 100;                   //cheifs guy, interception
+  y = 400;
   
-//  outcome = play[3];
-//}
+  outcome = play[3];         //interception
+}
+  //fill(255);
+  //textSize(30);
+  //textAlign(CENTER);
+  //text(outcome, 300, 100);
+  //System.out.print(value);
+  //System.out.println(outcome);
+  
+
   
 }
 
 void show()
 {
   roll();
+ 
   
 }
 
